@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+  liquibase:
+    contexts: dev
+  sql:
+    init:
+      mode: always
