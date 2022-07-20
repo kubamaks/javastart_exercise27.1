@@ -14,6 +14,8 @@
             <th scope="col">Imię</th>
             <th scope="col">Nazwisko</th>
             <th scope="col">Data urodzenia</th>
+            <th scope="col">Email</th>
+            <th scope="col">Newsletter</th>
         </tr>
         </thead>
         <tbody>
@@ -21,6 +23,10 @@
             <th th:text="${u.firstName}"></th>
             <th th:text="${u.lastName}"></th>
             <th th:text="${u.birthDate}"></th>
+            <th th:if="${u.email} == null" th:text="brak"></th>
+            <th th:unless="${u.email} == null" th:text="${u.email}"></th>
+            <th th:text="${u.hasNewsletter}"></th>
+
         </tr>
         </tbody>
     </table>

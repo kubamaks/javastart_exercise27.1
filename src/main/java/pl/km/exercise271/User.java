@@ -15,6 +15,8 @@ public class User {
     private String firstName;
     private String lastName;
     private Date birthDate;
+    private String email;
+    private boolean hasNewsletter;
 
     public User() {
     }
@@ -49,6 +51,22 @@ public class User {
 
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isHasNewsletter() {
+        return hasNewsletter;
+    }
+
+    public void setHasNewsletter(boolean hasNewsletter) {
+        this.hasNewsletter = hasNewsletter;
     }
 }
 

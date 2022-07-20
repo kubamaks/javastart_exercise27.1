@@ -6,5 +6,5 @@
     https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
     <include file="20220720_1_create_table_user.xml" relativeToChangelogFile="true"/>
     <include file="test_data/20220720_1_testdata_add_4_users.sql" relativeToChangelogFile="true" context="dev"/>
-
+    <include file="20220720_2_add_columns_to_table_user.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
