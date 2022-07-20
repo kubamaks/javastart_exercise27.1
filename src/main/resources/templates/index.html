@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Lista użytkowników</title>
+</head>
+<div layout:fragment="content" class="content">
+    <div class="text-center">Lista użytkowników:</div>
+    <div class="row justify-content-center">
+    <table class="table table-striped table-hover align-self-center" style="max-width: 750px; margin-top: 30px;">
+        <thead>
+        <tr>
+            <th scope="col">Imię</th>
+            <th scope="col">Nazwisko</th>
+            <th scope="col">Data urodzenia</th>
+            <th scope="col">Email</th>
+            <th scope="col">Newsletter</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="u:${users}">
+            <th th:text="${u.firstName}"></th>
+            <th th:text="${u.lastName}"></th>
+            <th th:text="${u.birthDate}"></th>
+            <th th:if="${u.email} == null" th:text="brak"></th>
+            <th th:unless="${u.email} == null" th:text="${u.email}"></th>
+            <th th:text="${u.hasNewsletter}"></th>
+
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+</html>
